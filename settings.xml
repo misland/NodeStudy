@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<server value="127.0.0.1">
+  <database value="PatientDB"/>
+  <table vlaue="Patient"/>
+  <pid value="imgId"/>
+  <name value="Name"/>
+  <sex value="Sex"/>
+  <male value="男"/>
+  <female value="女"/>
+  <birthday value="Birthday"/>
+</server>
