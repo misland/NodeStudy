@@ -1,47 +1,15 @@
-const log = require('./file');
+const path=require('path')
+const fs=require('fs')
 
-var messageA = {
-    PID: '001234',
-    Name: '张三',
-    Age: 23,
-    Sex: 'M',
-    Birthday: '19900923',
-    VisitNum: '123456'
-}
-
-var messageB = {
-    PID: '897654',
-    Name: '李四',
-    Age: 23,
-    Sex: 'M',
-    Birthday: '19901109',
-    VisitNum: '897456'
-}
-
-// setInterval(function () {
-//     log.writeLog(messageA);
-// }, 500);
-
-// setInterval(function () {
-//     log.writeLog(messageB);
-// }, 500);
-
-
-let errorA = {
-    PID: '009876',
-    message: 'File not found error'
-}
-
-let errorB = {
-    PID: '004567',
-    message: 'Type convert error'
-}
-
-setInterval(function () {
-    log.logError(errorA);
-}, 500);
-
-setInterval(function () {
-    log.logError(errorB);
-}, 500);
-
+// 判断路径是文件还是文件夹
+let modelPath = path.join(__dirname, 'model')
+fs.readdirSync(modelPath).forEach(function (file) {
+    // console.log(file)
+    // stat接收一个路径作为参数，文件名不行
+    fs.stat(modelPath+'/'+file,function (err, stat) {
+        if(err){
+            console.log(err)
+        }
+        console.log(stat.isDirectory())
+    })
+})
