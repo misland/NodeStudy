@@ -10,11 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "linq": "^3.1.1",
     "moment": "^2.22.2",
     "mongoose": "^5.3.4",
     "oracledb": "^3.0.0",
     "soap": "^0.25.0",
     "transliteration": "^1.6.6",
     "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "mongodb": "^3.1.10"
   }
 }
