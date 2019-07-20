@@ -37,38 +37,3 @@ console.log('after map 2:', arrmap)
 arrmap = arrmap.map((item) => item * 2)
 console.log('after map 3:', arrmap)
 
-
-// reduce 方法 
-let arrred = [12, 11, 10]
-let total = arrred.reduce((sum, item) => sum + item)
-console.log('total is :', total)
-//第二个参数是设置初始值
-let inittotal = arrred.reduce((sum, item) => sum + item, 10)
-console.log('init total is :', inittotal)
-
-var reducers = {  
-    totalInEuros : function(state, item) {
-      return state.euros += item.price * 0.897424392;
-    },
-    totalInYen : function(state, item) {
-      return state.yens += item.price * 113.852;
-    }
-  };
-  
-  var manageReducers = function(reducers) {
-    return function(state, item) {
-      return Object.keys(reducers).reduce(
-        function(nextState, key) {
-          reducers[key](state, item);
-          return state;
-        },
-        {}
-      );
-    }
-  };
-  
-  var bigTotalPriceReducer = manageReducers(reducers);
-  var initialState = {euros:0, yens: 0};
-  var items = [{price: 10}, {price: 120}, {price: 1000}];
-  var totals = items.reduce(bigTotalPriceReducer, initialState);
-  console.log(totals);

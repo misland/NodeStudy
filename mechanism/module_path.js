@@ -8,3 +8,5 @@ console.log(module.exports);
 console.log(require.extensions);
 //可以看到具体的加载方法
 console.log(require.extensions['.js'].toString());
+//nodejs环境变量
+console.log(process.env);
