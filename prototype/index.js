@@ -6,6 +6,13 @@ Array.prototype.print=function(arr){
     }
 }
 
+Array.prototype.sum=function(param){
+    //this指向array本身元素
+    return this.reduce(function(sum,item){
+        return sum+item;
+    })
+}
+
 //不能调用
 // Array.print(arr);
 
@@ -15,3 +22,6 @@ console.log(arr instanceof Array);
 console.log(typeof(arr));
 let test=new Array();
 test.print(arr);
+
+let abc=[1,2,3];
+console.log(abc.sum());
