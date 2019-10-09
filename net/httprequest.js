@@ -1,10 +1,18 @@
+/*
+ * @Description: Node http request
+ * @Author: Loki Zhao
+ * @Copyright: Loki Zhao
+ * @Date: 2019-05-22 21:26:47
+ * @LastEditors: Loki Zhao
+ * @LastEditTime: 2019-10-09 10:59:53
+ */
 const http = require('http');
 const net = require('net');
 
 //发起http请求
 let sendHttpRequest = function () {
     let req = http.request({
-        hostname: '172.16.40.75',
+        hostname: '',
         port: 80,
         path: '/sample/api/values',
         method: 'GET'
@@ -26,7 +34,7 @@ let sendHttpRequest = function () {
 // sendHttpRequest();
 
 //发起tcp请求
-let host = '10.87.2.46';
+let host = '';
 let port = 1234;
 let sendTcpRequest=function () {
     var client = new net.Socket()
