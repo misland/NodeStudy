@@ -1,6 +1,7 @@
 # Logs
 .idea
 .vscode
+.history
 node_modules/
 logs
 *.log
