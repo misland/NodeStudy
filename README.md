@@ -4,9 +4,9 @@
  * @Copyright: Karl Storz
  * @Date: 2019-10-30 11:42:40
  * @LastEditors: Loki Zhao
- * @LastEditTime: 2019-10-30 14:12:02
+ * @LastEditTime: 2019-10-30 14:19:07
  -->
-基本上全是毫无技术含量的低级代码，仅仅是为了学习Node.js，记录在这里用于后面忘记了时再回来查看<br>
+基本上全是（本来就是）毫无技术含量的低级代码，仅仅是为了学习Node.js，记录在这里用于后面忘记了时再回来查看<br>
 文件夹简介：<br>
 + js原生代码测试
     + class：测试js class代码
