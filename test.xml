@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:tns="http://Service.springboot/" 
+    xmlns:ns1="http://Service.springboot/">
+    <soap:Body>
+        <getUser>
+            <arg0>411001</arg0>
+        </getUser>
+    </soap:Body>
+</soap:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:ser="http://Service.springboot/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ser:getUser>
+            <!--Optional:-->
+            <arg0>411001</arg0>
+        </ser:getUser>
+    </soapenv:Body>
+</soapenv:Envelope>
