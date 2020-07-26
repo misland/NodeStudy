@@ -1,7 +1,7 @@
 /*
- * @Description: 
+ * @Description: 模拟方法重载
  * @Author: Loki Zhao
- * @Copyright: Karl Storz
+ * @Copyright: Loki Zhao
  * @Date: 2019-10-09 11:01:04
  * @LastEditors: Loki Zhao
  * @LastEditTime: 2019-10-10 09:39:16
@@ -9,7 +9,7 @@
 
 function addMethod(object, name, f) {
     var old = object[name];
-    object[name] = function () {
+    object[name] = function() {
         console.log(f, f.length);
         // f.length为函数定义时的参数个数
         // arguments.length为函数调用时的参数个数

@@ -1,7 +1,7 @@
 /*
  * @Description: 
  * @Author: Loki Zhao
- * @Copyright: Karl Storz
+ * @Copyright: Loki Zhao
  * @Date: 2019-05-22 21:26:47
  * @LastEditors: Loki Zhao
  * @LastEditTime: 2019-12-02 16:21:54
@@ -10,13 +10,13 @@ const soap = require('soap');
 
 let url = 'http://localhost:8080/service/user?wsdl';
 let args = { arg0: '411001' };
-let soaptest = function () {
-    return new Promise(function (resolve, reject) {
-        soap.createClient(url, function (err, client) {
+let soaptest = function() {
+    return new Promise(function(resolve, reject) {
+        soap.createClient(url, function(err, client) {
             if (err) {
                 reject(err);
             }
-            client.getUser(args, function (err, result) {
+            client.getUser(args, function(err, result) {
                 if (err) {
                     reject(err);
                 }
@@ -27,9 +27,9 @@ let soaptest = function () {
     });
 }
 soaptest()
-    .then(function (result) {
+    .then(function(result) {
         console.log('result is: ', result);
     })
-    .catch(function (err) {
+    .catch(function(err) {
         console.log('error happened: ', err);
     });
